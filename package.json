@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon db.js ",
+        "start": "nodemon db.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
@@ -13,7 +13,6 @@
     "dependencies": {
         "bcryptjs": "^2.4.3",
         "body-parser": "^1.19.0",
-        "browser-sync": "^2.27.7",
         "connect-mongo": "^4.4.1",
         "dotenv": "^10.0.0",
         "ejs": "^3.1.6",

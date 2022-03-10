@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>account</title> 
+    <link rel="stylesheet" href="./css/signin.css"> 
+</head> 
+<body> 
+    <div class="hero"> 
+    <!-- <button class="close-button">&times;</button> --> 
+    <div class="accountpage"> 
+        <!-- <button id="show-login">login</button>  -->
+          
+        </div> 
+        <div class="accountconrainer"> 
+            <!-- <button class="close-button">&times;</button>  --> 
+           <div class="accountrow"> 
+            <div class="accountcol-2"> 
+                
+            </div>   
+            <div class="accountcol-2"> 
+             <div class="accountform-container"> 
+                 <div class="accountform-btn"> 
+                     <span onclick="login()">Login</span> 
+                     <span onclick="register()">Register</span> 
+                     <hr id="indicator"> 
+                 </div> 
+                 <!-- <button data-close-button class="close-button">&times;</button>  --> 
+                 <!-- sign in -->
+                 <form action="/signin" method="post" id="LoginForm"> 
+                    <input type="text" name="username" placeholder="Username"> 
+                    <input type="password" name="password" placeholder="Password"> 
+                    <button type="submit" class="accountbtn">Login</button> 
+                    <a href="">Forgot password</a> 
+                    <button data-close-button class="close-button_tocancel_login">Cancel</button> 
+                  </form> 
+                  <!-- signup -->
+                  <form action="/signup" method="post" id="RegForm"> 
+                    <!-- <button class="close-button">&times;</button>  --> 
+                    <input type="text" name="username" placeholder="Username"> 
+                    <input type="email" name="email" placeholder="Email"> 
+                     <input type="password" name="password" placeholder="Password"> 
+                     <button type="submit" class="accountbtn">Register</button> 
+                      
+                 </form> 
+ 
+             </div> 
+            </div>   
+ 
+           </div>  
+        </div> 
+        <div id="overlay"></div> 
+    </div> 
+</div> 
+    <script> 
+        var LoginForm = document.getElementById("LoginForm") 
+        var RegForm = document.getElementById("RegForm") 
+        var indicator = document.getElementById("indicator") 
+          function register(){ 
+              RegForm.style.transform =  "translateX(0px)" 
+              LoginForm.style.transform =  "translateX(0px)" 
+              indicator.style.transform = "translateX(100px)" 
+          } 
+          function login(){ 
+              RegForm.style.transform =  "translateX(300px)" 
+              LoginForm.style.transform =  "translateX(300px)" 
+              indicator.style.transform = "translateX( 0px)" 
+          } 
+              
+           
+    </script> 
+</body> 
+</html>

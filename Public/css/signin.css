@@ -1,0 +1,151 @@
+*{ 
+    margin: 0; 
+    padding: 0; 
+} 
+.hero{ 
+    background: black; 
+    /* height: 100%; */ 
+} 
+.account-page{ 
+    padding: 100px 0; 
+    background-color:aliceblue; 
+    padding-left: 50%; 
+    padding-right: 10px; 
+ 
+} 
+.accountcol-2{ 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+} 
+.accountform-container{ 
+    padding: 20px; 
+    background-color: #203239; 
+    border: 1px solid black; 
+    /* visibility: ; */ 
+    width: 300px; 
+    height: 400px; 
+    position:absolute; 
+    text-align: center; 
+    padding: auto; 
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1); 
+    overflow: hidden; 
+    /* display: flex; */ 
+    /* align-items: center; */ 
+    /* justify-content: center; */ 
+    top: 25%; 
+    left: 40%; 
+    /* transform: translate(-50%, -50%)scale(0); */ 
+    transition: 200ms ease-in-out; 
+    border-radius: 10px; 
+    z-index: 10; 
+     max-width: 80%;   
+ 
+ 
+} 
+/* .accountform-container.active{ 
+    transform: translate(-50%, -50%) scale(1); 
+} */ 
+.close-button{ 
+    cursor: pointer; 
+    border: none; 
+    outline: none; 
+    background:gray;  
+    font-size: 1.25rem; 
+    font-weight: bold; 
+ 
+} 
+.close-button_tocancel_login{ 
+    cursor: pointer; 
+    border: none; 
+    outline: none; 
+    background:rgb(58, 56, 56); 
+    display: block; 
+    margin: 10px; 
+    font-size: 1.25rem; 
+    font-weight: bold; 
+ 
+} 
+.accountform-container span{ 
+    font-weight: bold; 
+    padding: 0 10px; 
+    color: #555; 
+    cursor: pointer; 
+    width: 100px; 
+    display: inline-block; 
+ 
+} 
+.accountform-btn{ 
+    display: inline-block; 
+    background-color: linear-gradient(rgba(red right blue, 100,0.5) 0 0); 
+} 
+.accountform-container form{ 
+    max-width: 300px; 
+    padding: 0 20px; 
+    position: absolute; 
+    top: 130px; 
+    transition:transform 1s; 
+ 
+} 
+.accountbtn{
+    margin-top: 50px;
+    font-size: 20px;
+    width: auto;
+
+}
+form input{ 
+    width: 100%; 
+    display: block; 
+    height: 30px; 
+    margin: 10px 0; 
+    padding: 0 10px; 
+   border: 1px solid #ccc;  
+} 
+form .btn{ 
+    width: 100%; 
+    border: none; 
+    cursor: pointer; 
+    margin: 10px 0; 
+} 
+form .btn:focus{ 
+    outline: none; 
+} 
+ 
+#LoginForm{ 
+    margin-right: 30px; 
+    padding: 0px; 
+    left: -230px; 
+} 
+#RegForm{ 
+    margin-left: 20px; 
+    padding: 0px; 
+    left: 30px; 
+} 
+form a{ 
+    font-size: 12px; 
+} 
+#indicator{ 
+    width: 100px; 
+    border: none; 
+    background:white; 
+    height: 3px; 
+    margin-top: 8px; 
+    transform: translateX(100px); 
+    transition: transform 1s; 
+} 
+#overlay{ 
+    position: fixed; 
+    opacity: 0.5; 
+    transition: 200ms ease-in-out; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background-color: black; 
+    pointer-events: all; 
+ 
+} 
+#overlay.active{ 
+    opacity: 1; 
+    pointer-events: all; 
+}
