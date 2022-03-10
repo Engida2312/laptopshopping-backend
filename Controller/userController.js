@@ -1,6 +1,4 @@
 const User = require('../model/User');
-const usersCollection = require('../db').db().collection("Users");
-const bcrypt = require('bcryptjs');
 
 //home
 exports.home = function(req, res){
@@ -18,7 +16,7 @@ exports.home = function(req, res){
             })
         }
     }else{
-        console.log("no session")
+        // console.log("no session")
         res.render('home',{
             username: "",
             role: "",
@@ -30,6 +28,7 @@ exports.home = function(req, res){
 exports.viewSignin = function(req, res){
     res.render('signin')     
 }
+
 // signup
 exports.signup = function(req, res){
     let user = new User(req.body);
