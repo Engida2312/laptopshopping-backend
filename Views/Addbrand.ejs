@@ -1,0 +1,42 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addbrand</title>
+    <script src="https://kit.fontawesome.com/b3562606d1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/adminchart.css">
+</head>
+<body> -->
+    <%- include('includes/admin-header') %>
+ <div class="admin_body_container">
+
+    <h1 class="brand-title" >Add Brand</h1>
+    <form action="" class="brand-form">
+        <div  class="brand-namebox">
+            <h3>Brand Name:</h3>
+            <input type="text">
+         <p class="notice">make the brand name short and simple </p>
+        </div>
+        <h3>Brand logo:</h3>
+        <div class="brand-image">
+            <div class="brandimage-box">
+                <i class="far fa-image"></i>
+            </div>
+            <div class="branddrop-image">
+                <h5>drop your image here or</h5>
+                <input type="file" id="img" name="img" accept="image/*">           
+            </div>
+        </div>
+        <h3>Description</h3>
+        <textarea name="description" id="description" cols="50" rows="10"></textarea>
+        <div class="product-button">
+            <button type="confirm">Confirm</button>
+            <button type="submit" id="add">Add</button>
+        </div>
+    </form>
+</div>   
+</body>
+</html>

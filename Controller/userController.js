@@ -64,3 +64,9 @@ exports.signout = function(req, res){
         res.redirect('/')
     })
 }
+
+
+//allUsers
+exports.allUsers = function (req, res) {
+    res.render('Allusers')
+}

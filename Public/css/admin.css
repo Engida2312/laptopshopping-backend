@@ -1,105 +1,115 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  body {
-    background: none;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: none;
+}
+nav {
+  background-color: #121212;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  position: relative;
+  margin-left: 300px;
+}
+.nav_active {
+  display: block;
+}
+nav form {
+  width: 40%;
+  margin: 15px;
+}
+nav form input {
+  border: 1px solid gray;
+  border-radius: 8px;
+  height: 100%;
+  width: 90%;
+  overflow: hidden;
+  padding-left: 20px;
+  margin-right: 0;
+}
+.nav-form button {
+  position: relative;
+  border: none;
+  margin-left: -35px;
+  height: 100%;
+  background: none;
+  cursor: pointer;
+}
+.nav-side {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  padding: 0;
+}
+.nav-side button {
+  height: 35px;
+  width: 35px;
+  border: none;
+  border-radius: 50%;
+  margin-right: 35px;
+  background-color: rgb(173, 173, 250);
+}
+.nav-side i {
+  color: rgb(250, 231, 57);
+  font-size: 18px;
+}
+.admin-sidebar {
+  background-color: #121212;
+  position: absolute;
+  top: 0px;
+  width: 300px;
+  height: 100vh;
+  color: white;
+}
+.sidebar-list {
+  margin-left: 20px;
+}
+.sidebar-list h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.2rem;
+}
+.sidebar-list li,
+.sidebar-list i {
+  margin-left: 1rem;
+}
+.admin-profile {
+  display: flex;
+  flex-direction: row;
+}
+.admin-profile img {
+  border-radius: 50%;
+  margin: 15px;
+}
+.admin-name {
+  margin-top: 15px;
+}
+.name {
+  margin-bottom: 0;
+}
+.email {
+  margin-top: 5px;
+}
+.admiin-dashbord-openbtn {
+  display: none;
+  width: 32px;
+  height: 32px;
+  margin-top: 15px;
+}
+@media only screen and (max-width: 768px) {
   nav {
-    background-color: #121212;
-    display: flex;
-    flex-direction: row;
-    height: 60px;
-    position: relative;
-    margin-left: 300px;
-  }
-  .nav_active {
-    display: block;
-  }
-  nav form {
-    width: 40%;
-    margin: 15px;
-  }
-  nav form input {
-    border: 1px solid gray;
-    border-radius: 8px;
-    height: 100%;
-    width: 90%;
-    overflow: hidden;
-    padding-left: 20px;
-    margin-right: 0;
-  }
-  .nav-form button {
-    position: relative;
-    border: none;
-    margin-left: -35px;
-    height: 100%;
-    background: none;
-    cursor: pointer;
-  }
-  .nav-side {
-    position: absolute;
-    right: 30px;
-    top: 15px;
-    padding: 0;
-  }
-  .nav-side button {
-    height: 35px;
-    width: 35px;
-    border: none;
-    border-radius: 50%;
-    margin-right: 35px;
-    background-color: rgb(173, 173, 250);
-  }
-  .nav-side i {
-    color: rgb(250, 231, 57);
-    font-size: 18px;
+    margin-left: 0;
   }
   .admin-sidebar {
-    background-color: #121212;
-    position: absolute;
-    top: 0px;
-    width: 300px;
-    height: 100vh;
-    color: white;
-  }
-  .admin-profile {
-    display: flex;
-    flex-direction: row;
-  }
-  .admin-profile img {
-    border-radius: 50%;
-    margin: 15px;
-  }
-  .admin-name {
-    margin-top: 15px;
-  }
-  .name {
-    margin-bottom: 0;
-  }
-  .email {
-    margin-top: 5px;
+    display: none;
+    margin-top: 60px;
+    z-index: 1;
   }
   .admiin-dashbord-openbtn {
-    display: none;
-    width: 32px;
-    height: 32px;
-    margin-top: 15px;
+    display: block;
   }
-  @media only screen and (max-width: 768px) {
-    nav {
-      margin-left: 0;
-    }
-    .admin-sidebar {
-      display: none;
-      margin-top: 60px;
-      z-index: 1;
-    }
-    .admiin-dashbord-openbtn {
-      display: block;
-    }
-  }
-  @media only screen and (min-width: 769px) {
-  }
-  
+}
+@media only screen and (min-width: 769px) {
+}

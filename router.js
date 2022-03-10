@@ -18,4 +18,8 @@ router
     .route('/signout')
     .post(userController.signout);
 
+router
+    .route('/allusers')
+    .get(userController.allUsers);
+
 module.exports = router;
