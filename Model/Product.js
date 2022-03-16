@@ -7,20 +7,24 @@ let Product = function (data) {
 
 //add product
 Product.prototype.addProduct = function () {
-    this.data = {
-        _id: this.data._id,
-        name: this.data.Productname,
-        price: this.data.price,
-        category: this.data.category,
-        brand: this.data.brand,
-        storage: this.data.storage,
-        ram: this.data.ram,
-        productImage: " "
-    }
-    return new Promise(async () => {
+    return new Promise(async (resolve, reject) => {
+        this.data = {
+            name: this.data.productname,
+            price: this.data.price,
+            category: this.data.category,
+            brand: this.data.brand,
+            description: this.data.description,
+            storage: this.data.storage,
+            ram: this.data.ram,
+            image: this.data.image,
+            createdDate: new Date()
+        }
+        if(this.errors.length != 0){
+            reject()
+        }else{
             await productCollection.insertOne(this.data);
-          
-       
+            resolve();
+        }
     })
 }
 

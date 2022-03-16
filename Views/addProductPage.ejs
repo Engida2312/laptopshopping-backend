@@ -1,15 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product page</title>
-    <script src="https://kit.fontawesome.com/b3562606d1.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/adminchart.css">
-</head>
-<body>
+<%- include('includes/admin-header') %>
+
  <div class="admin_body_container">
 
     <h1 class="add-product">ADD Product</h1>
@@ -18,19 +9,19 @@
             <div class="col-1">
                 <div class="poroduct-name">
                     <h3 >Product name:</h3>
-                    <input name="Productname"  type="text">
+                    <input name="productname"  type="text">
                 </div>
                 <h3>price</h3>
                 <input  name="price" type="text">
                 <h3>Category</h3>
-                <select name="Category" id="Categorys">
+                <select name="category" id="Categorys">
                     <option value="MacBook">MacBook</option>
                     <option value="Ultrabook">Ultrabook</option>
                     <option value="Notebook">Notebook</option>
                     <option value="Convertible">Convertible</option>
                   </select>         
                    <h3>Brand</h3>
-                   <select name="Brand" id="Brands">
+                   <select name="brand" id="Brands">
                     <option value="Apple">Apple</option>
                     <option value="Lenovo">Lenovo</option>
                     <option value="Dell">Dell</option>
@@ -38,7 +29,7 @@
                   </select>  
                 <div class="description">
                     <h3 >Description:</h3>
-                    <textarea rows="10" cols="35"  name="Description" form="productform"> Enter text here...</textarea>
+                    <textarea rows="10" cols="35"  name="description" form="productform"> Enter text here...</textarea>
                 </div>
                 
             </div>
@@ -50,7 +41,7 @@
                     </div>
                     <div class="productdrop-image">
                         <h5>drop your image here or</h5>
-                        <input type="file" id="img" name="img" accept="image/*">           
+                        <input type="file" id="img" name="image" accept="image/*">           
                     </div>
                 </div>
                 <p class="notice">add up to four image for the product make sure all the 
@@ -59,7 +50,7 @@
                 <div class="storage-ram">
                     <div class="add-storage">
                         <h3>Storage</h3>
-                        <select name="Storage" id="Storages">
+                        <select name="storage" id="Storages">
                             <option value="250GB">250GB</option>
                             <option value="500GB">500GB</option>
                             <option value="1T">1T</option>
@@ -69,7 +60,7 @@
                    </div>
                     <div class="add-ram">
                         <h3>RAM</h3>
-                        <select name="RAM" id="RAMs">
+                        <select name="ram" id="RAMs">
                             <option value="4GB">4GB</option>
                             <option value="8GB">8GB</option>
                             <option value="16GB">16GB</option>
@@ -78,12 +69,12 @@
                           </select>           
                    </div>
                 </div>
-                <div class="add-date">
+                <!-- <div class="add-date">
                     <h3>Produc date:</h3>
                     <input type="date" id="date" name="product-date">        
-                </div>
+                </div> -->
                 <div class="product-button">
-                    <button type="confirm">Confirm</button>
+                    <!-- <button type="confirm">Confirm</button> -->
                     <button type="submit" id="add">Add</button>
                 </div>
                 
