@@ -27,6 +27,6 @@ router
     .get(productController.viewSingleProduct);
 router
     .route('/AddProduct')
-    .get(productController.addProductPage);
+    .post(productController.addProduct);
 
-module.exports = router;
+module.exports = router; 

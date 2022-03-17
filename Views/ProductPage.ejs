@@ -13,14 +13,15 @@
  <div class="admin_body_container">
 
     <h1 class="add-product">ADD Product</h1>
-    <form action="">
+    <form action="/AddProduct" method="post" >
         <div class="product-container">
             <div class="col-1">
                 <div class="poroduct-name">
                     <h3 >Product name:</h3>
-                    <input   type="text">
+                    <input name="Productname"  type="text">
                 </div>
-               
+                <h3>price</h3>
+                <input  name="price" type="text">
                 <h3>Category</h3>
                 <select name="Category" id="Categorys">
                     <option value="MacBook">MacBook</option>
