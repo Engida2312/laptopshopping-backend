@@ -12,148 +12,30 @@
             </div>
             <h2>Highlights</h2>
             <div class="slider h_slider_container">
-                <div class="h_product_card">
-                    <div class="heart_icon">
-                        <i class="far fa-heart"></i>
-                    </div>
-                    <div class="product_img_container">
-                        <img src="./images/pngfind.com-brillos-de-estrellas-fondo-3660918.png" alt="image">
-                    </div>
-                    <div class="card_detail">
-                        <h3>Lenovo IdeaPad 3 15IML05
-                            10th Gen Core ...</h3>
-                        <div class="product_price">
-                            <h3>₹41,490.00</h3>
-                            <h4>₹51,490.00 </h4>
+                <% products.forEach((product, index)=>{ %>
+                    <div class="h_product_card">
+                        <div class="heart_icon">
+                            <i class="far fa-heart"></i>
                         </div>
-                        <div class="product_rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i> 
+                        <div class="product_img_container">
+                            <img src="/uploads/images/<%=product.image[0]%>" alt="image">
                         </div>
-                    </div>
-                </div>
+                        <div class="card_detail">
+                            <h3><%=product.name%></h3>
+                            <div class="product_price">
+                                <h3>₹<%=product.price%></h3>
+                            </div>
+                            <div class="product_rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i> 
+                            </div>
+                        </div>
+                    </div>    
 
-                <div class="h_product_card">
-                    <div class="heart_icon">
-                        <i class="far fa-heart"></i>
-                    </div>
-                    <div class="product_img_container">
-                        <img src="./images/pngfind.com-brillos-de-estrellas-fondo-3660918.png" alt="image">
-                    </div>
-                    <div class="card_detail">
-                        <h3>Lenovo IdeaPad 3 15IML05
-                            10th Gen Core ...</h3>
-                        <div class="product_price">
-                            <h3>₹41,490.00</h3>
-                            <h4>₹51,490.00 </h4>
-                        </div>
-                        <div class="product_rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i> 
-                        </div>
-                    </div>
-                </div>
-                <div class="h_product_card">
-                    <div class="heart_icon">
-                        <i class="far fa-heart"></i>
-                    </div>
-                    <div class="product_img_container">
-                        <img src="./images/pngfind.com-brillos-de-estrellas-fondo-3660918.png" alt="image">
-                    </div>
-                    <div class="card_detail">
-                        <h3>Lenovo IdeaPad 3 15IML05
-                            10th Gen Core ...</h3>
-                        <div class="product_price">
-                            <h3>₹41,490.00</h3>
-                            <h4>₹51,490.00 </h4>
-                        </div>
-                        <div class="product_rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i> 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="h_product_card">
-                    <div class="heart_icon">
-                        <i class="far fa-heart"></i>
-                    </div>
-                    <div class="product_img_container">
-                        <img src="./images/pngfind.com-brillos-de-estrellas-fondo-3660918.png" alt="image">
-                    </div>
-                    <div class="card_detail">
-                        <h3>Lenovo IdeaPad 3 15IML05
-                            10th Gen Core ...</h3>
-                        <div class="product_price">
-                            <h3>₹41,490.00</h3>
-                            <h4>₹51,490.00 </h4>
-                        </div>
-                        <div class="product_rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i> 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="h_product_card">
-                    <div class="heart_icon">
-                        <i class="far fa-heart"></i>
-                    </div>
-                    <div class="product_img_container">
-                        <img src="./images/pngfind.com-brillos-de-estrellas-fondo-3660918.png" alt="image">
-                    </div>
-                    <div class="card_detail">
-                        <h3>Lenovo IdeaPad 3 15IML05
-                            10th Gen Core ...</h3>
-                        <div class="product_price">
-                            <h3>₹41,490.00</h3>
-                            <h4>₹51,490.00 </h4>
-                        </div>
-                        <div class="product_rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i> 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="h_product_card">
-                    <div class="heart_icon">
-                        <i class="far fa-heart"></i>
-                    </div>
-                    <div class="product_img_container">
-                        <img src="./images/pngfind.com-brillos-de-estrellas-fondo-3660918.png" alt="image">
-                    </div>
-                    <div class="card_detail">
-                        <h3>Lenovo IdeaPad 3 15IML05
-                            10th Gen Core ...</h3>
-                        <div class="product_price">
-                            <h3>₹41,490.00</h3>
-                            <h4>₹51,490.00 </h4>
-                        </div>
-                        <div class="product_rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i> 
-                        </div>
-                    </div>
-                </div>
+                <%})%>
                 
             </div>
             <h2>Popular Brands</h2>
