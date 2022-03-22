@@ -1,7 +1,8 @@
+const Product = require('../model/Product');
 const User = require('../model/User');
 
 //home
-exports.home = function(req, res){
+exports.home = async function(req, res){
     if(req.session.user){
         if(req.session.user.role == 'admin'){
             res.render('adminDashbord',{
@@ -9,22 +10,30 @@ exports.home = function(req, res){
                 role: req.session.user.role
             })
         }else if(req.session.user.role == 'user'){
+            let product = new Product(req.body); 
+            let result = await product.readAllProduct();
+            console.log(result)
             res.render('home',{
+                title:"homepage", 
                 username: req.session.user.username,
                 role: req.session.user.role,
-                name:"homepage"
+                products : result
             })
         }
     }else{
         // console.log("no session")
+        let product = new Product(req.body); 
+        let result = await product.readAllProduct();
+        console.log(result)
         res.render('home',{
             username: "",
             role: "",
+            products : result
         })
     }
 }
 
-// sign in
+// sign in 
 exports.viewSignin = function(req, res){
     res.render('signin')     
 }

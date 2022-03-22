@@ -23,11 +23,16 @@ router
     .route('/allusers')
     .get(userController.allUsers);
 router
-    .route('/singleProduct')
+    .route('/singleProduct/:id')
     .get(productController.viewSingleProduct);
+
 router
     .route('/addProduct')
     .get(productController.viewAddProduct)
     .post(productController.addProduct);
 
-module.exports = router; 
+// router
+//     .route('readAllProduct')
+    
+
+module.exports = router;

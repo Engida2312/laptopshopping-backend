@@ -4,7 +4,7 @@
  <div class="admin_body_container">
 
     <h1 class="add-product">ADD Product</h1>
-    <form action="/AddProduct" method="post" >
+    <form action="/AddProduct" method="post" enctype="multipart/form-data">
         <div class="product-container">
             <div class="col-1">
                 <div class="poroduct-name">
@@ -41,7 +41,7 @@
                     </div>
                     <div class="productdrop-image">
                         <h5>drop your image here or</h5>
-                        <input type="file" id="img" name="image" accept="image/*">           
+                        <input type="file" id="img" name="image" multiple>           
                     </div>
                 </div>
                 <p class="notice">add up to four image for the product make sure all the 
