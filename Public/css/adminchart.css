@@ -1,0 +1,299 @@
+/* *********************************
+common css
+********************************* */
+@import url("https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+}
+.admin_body_container {
+  margin-left: 300px;
+  /* margin-top: 60px; */
+  height: 100vh;
+  padding: 0.5rem;
+  background-color: rgb(0, 0, 0);
+}
+.admin_body_container > div {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+h1 {
+  font-family: "Supermercado One", cursive;
+  color: white;
+}
+.notice {
+  color: rgb(71, 70, 70);
+  font-size: 12px;
+}
+
+.product-button {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+.product-button button {
+  color: white;
+  background-color: rgb(3, 3, 41);
+  border: none;
+  border-radius: 8px;
+  height: 32px;
+  width: 84px;
+  font-size: 14px;
+  box-shadow: 5px 5px 20px black;
+  cursor: pointer;
+}
+.product-button button:hover {
+  transform: scale(1.2);
+  background-color: rgb(4, 4, 71);
+}
+/* *******************************
+adminchart
+********************************* */
+
+.box-1,
+.box-2,
+.box-3,
+.box-4 {
+  border: 1px solid black;
+  border-radius: 10%;
+  margin: 10px;
+  height: 100px;
+  width: 150px;
+  background-color: #1d1d1d;
+  color: white;
+  padding: 10px;
+  box-shadow: 10px 10px 10px rgb(49, 49, 49);
+  text-align: center;
+}
+.chart1 {
+  height: 250px;
+  width: 500px;
+  margin-right: 20px;
+  /* background-color: rgb(100, 170, 172); */
+}
+.chart {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+.chart2 {
+  width: 230px;
+  /* background-color: blueviolet; */
+  margin-left: 20px;
+}
+
+/* *********************************
+Product Page
+********************************* */
+.product-container {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(177, 176, 204);
+  width: 100hw;
+  border: 5px solid gray;
+  box-shadow: 10px 10px 30px black;
+}
+.product-image {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.productimage-box {
+  border: 1px dashed gray;
+  border-radius: 8px;
+  height: 80px;
+  width: 80px;
+  margin-top: 25px;
+}
+.productimage-box i {
+  font-size: 80px;
+  color: gray;
+}
+.productdrop-image {
+  border: 1px dashed gray;
+  border-radius: 8px;
+  height: 100px;
+  width: 200px;
+  margin: 10px;
+  padding-top: 15px;
+}
+.productdrop-image input {
+  padding-left: 15px;
+}
+.poroduct-name input {
+  width: 300px;
+  height: 22px;
+}
+.description input {
+  height: 180px;
+  width: 300px;
+}
+
+.col-1,
+.col-2 {
+  margin: 30px;
+}
+.storage-ram {
+  display: flex;
+  flex-direction: row;
+}
+
+.add-storage,
+.add-ram {
+  margin-left: 45px;
+}
+.add-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+#add {
+  margin-left: 30%;
+}
+select {
+  width: 120px;
+}
+
+/* *********************************
+add brand
+********************************* */
+.brand-form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(177, 176, 204);
+  border: 5px solid gray;
+  box-shadow: 10px 10px 30px black;
+  width: 700px;
+  margin: 30px;
+  padding: 15px;
+}
+.brand-namebox input {
+  width: 50%;
+  height: 22px;
+}
+.brand-image {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+.brandimage-box {
+  border: 1px dashed gray;
+  border-radius: 8px;
+  height: 120px;
+  width: 120px;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+.brandimage-box i {
+  font-size: 120px;
+  color: gray;
+}
+.branddrop-image {
+  border: 1px dashed gray;
+  border-radius: 8px;
+  height: 150px;
+  width: 300px;
+  margin: 10px;
+  padding-top: 15px;
+}
+.branddrop-image input {
+  padding-left: 20%;
+}
+
+/* *********************************
+all usrs
+********************************* */
+table {
+  /* width: 800px; */
+  background-color: rgb(238, 234, 234);
+  border-collapse: collapse;
+  margin: 20px;
+  width: 70vw;
+}
+th {
+  height: 50px;
+  text-align: left;
+  color: rgb(2, 2, 54);
+  padding: 8px;
+}
+td,
+th {
+  border: 1px solid #ddd;
+}
+td img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+td {
+  padding: 8px;
+}
+#email {
+  color: rgb(2, 2, 54);
+}
+.fa-caret-right {
+  transform: rotateX("90");
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .admin_body_container {
+    margin-left: 0;
+  }
+  .product-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .brand-form {
+    width: 350px;
+  }
+  .brand-image {
+    flex-direction: column-reverse;
+  }
+  .dashbord-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .chart {
+    flex-direction: column;
+  }
+  .chart1 {
+    width: 350px;
+  }
+  .chart2 {
+    width: 300px;
+  }
+  table {
+    width: 100vw;
+    margin: 0;
+  }
+  .user_table_container {
+    overflow-x: scroll;
+  }
+  .address_col {
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .dashbord-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .dashbord-insidecontainer1 {
+    display: flex;
+    flex-direction: row;
+  }
+  .dashbord-insidecontainer2 {
+    display: flex;
+    flex-direction: row;
+  }
+}

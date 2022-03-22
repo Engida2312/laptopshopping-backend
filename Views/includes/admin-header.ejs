@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- css link -->
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/adminchart.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <nav>
+        <button id="admin-sidebar-button" class="admiin-dashbord-openbtn" >☰ </button> 
+        <form action="" class="nav-form">
+            <input type="text" placeholder="Search" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        
+        <div class="nav-side">
+            <button class="notification"><i class="fa fa-bell"></i></button>
+            <button class="profile"><i class="fa fa-user-circle"></i></button>
+        </div>
+        <% if(username){%>
+            <form action="/signout" method="post">
+                <p style="color: aqua; display: inline;"><%= username %></p>
+                <button style="margin-left: 1rem; color: white; background: none;border: none;" id="sign_in">Sign out</button>
+            </form>
+        <%}%>
+    </nav>
+    <div id="adminsidebar" class="admin-sidebar">
+        <div class="admin-profile">
+                <a href="" ><img src="/images/yohannes.JPG" width="80" height="80" alt="image"></a>
+                <div class="admin-name">
+                    <h4 class="name">yohannes mumecha</h4>
+                    <h6 class="email">jone@gmail.com</h6>
+                </div>
+            
+        </div>
+        
+       <hr>
+        <ul class="sidebar-list" >
+            <h3 class="side-dashboard">Dashboard</h3>
+            <h4>interface:</h4>
+         <a href="/allusers"> <li class="dropdown-btn"> All Users<i class="fa fa-caret-right"></i></li></a>
+            <h3>Tasks:</h3>
+            <li class="dropdown-btn"><a href="/addProduct">add Products</a> <i class="fa fa-caret-right"></i></li>
+            <li class="dropdown-btn"> add Brand<i class="fa fa-caret-right"></i></li></a>
+
+            <h3>Charts</h3>
+            <h3>Tables</h3>
+        </ul>
+    </div>
+    <script>
+        var navBtn = document.querySelector("#admin-sidebar-button")
+        const sidNav= document.querySelector(".admin-sidebar");
+        navBtn.addEventListener("click", (e)=>{
+            if(sidNav.style.display === "none"){
+                sidNav.style.display = "block"
+            }else{
+                sidNav.style.display = "none"
+            }
+            
+        })
+
+    </script>

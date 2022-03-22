@@ -1,0 +1,52 @@
+<%- include('includes/admin-header') %>
+
+    <div class="admin_body_container">
+  
+      <div class="dashbord-container">
+         <div class="dashbord-insidecontainer1">
+              <div class="box-1">
+                  <h3>Earning</h3>
+                  <h4>$40,000</h4>
+              </div>
+              <div class="box-2">
+                  <h3>Anual Revinew</h3>
+                  <h4>$40,000</h4>
+              </div>
+         </div>
+         <div class="dashbord-insidecontainer2">
+              <div class="box-3">
+                  <h3>Tasks</h3>
+                  <h4>50% done</h4>
+              </div>
+              <div class="box-4">
+                  <h3>Order Requests</h3>
+                  <h4>35</h4>
+              </div>
+         </div>
+      </div>
+     <div class="chart">
+      <div class="chart1">
+          <canvas id="myChart1" ></canvas>
+     
+      </div>
+      <div class="chart2">
+          <canvas id="myChart2" height="320px" ></canvas>
+     
+      </div>
+     </div>
+      <script src="/js/Chart.js"></script> 
+      <script>
+          const myChart1 = new Chart(
+            document.getElementById('myChart2'),
+            config
+          );
+        </script>
+      <script>
+          const myChart = new Chart(
+            document.getElementById('myChart1'),
+            config
+          );
+        </script>
+     </div>
+  </body>
+  </html>

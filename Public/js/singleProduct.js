@@ -10,7 +10,7 @@ function imageZoom(imgID) {
     // console.log("width", cont.width);
     // console.log("height", cont.height);
     let ratio = 1
-    lens.style.backgroundSize = "1000px";
+    lens.style.backgroundSize = "2000px";
     const siz = (img.width * ratio) + (img.height * ratio);
     console.log("size", siz)
 

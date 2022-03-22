@@ -1,34 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Singe Page</title>
-    <link rel="stylesheet" href="./css/singelpage.css">
-</head>
-<body>
+<%- include('includes/user-header') %>
     <div class="singel_page_product">
         <div class="singel_page_productimage">
            
             <div class="singel_page_sideimages">
-                <img id="sigelpage_defult"  src="./images/front-view.jpg" alt="zoomed image">
-                <img id="sigelpage_sideimg1"  src="./images/back_view.jpg" alt="side image 1">
-                <img id="sigelpage_sideimg2"  src="./images/side_view.jpg" alt="side image 2">
-                <img id="sigelpage_sideimg3"  src="./images/top_view.jpg" alt="side image 3">
-           
+                <img id="sigelpage_defult"  src="/images/front-view.jpg" alt="zoomed image">
+                <img id="sigelpage_sideimg1"  src="/images/back_view.jpg" alt="side image 1">
+                <img id="sigelpage_sideimg2"  src="/images/side_view.jpg" alt="side image 2">
+                <img id="sigelpage_sideimg3"  src="/images/top_view.jpg" alt="side image 3">
             </div>
             <div class="singel_page_zommedimage">
                 <h1>your laptop</h1>
                 <div id="singel_page_zoomedimage" class="singel_page_centerimage">
                     <div id="lens"></div>
                     <img id="zoomdimg" src=" " alt="zoomed image">
-                
                 </div>
-               
             </div>
-
-
         </div>
         <div class="singel_page_pruductditail">
           <h1>your laptop</h1>
@@ -40,12 +26,12 @@
            <h3>brand  <span>: linovo</span></h3> 
             <div class="singe_page_buttons">
                 <button>add to cart</button>
-                <a href="../OrderSummery/OrderSUMMERY.html"><button >Buy now</button></a>
+                <button>Buy now</button>
             </div>
         </div>
     </div>
-    
-   <script type="text/javascript" src="/js/singelPage.js"></script>
-   <script type="text/javascript" src="/js/singelpage_slider.js"></script>
+    <%- include('includes/footer') %>
+   <script type="text/javascript" src="/js/singleProduct.js"></script>
+   <script type="text/javascript" src="/js/singleProductSlider.js"></script>
 </body>
 </html>
