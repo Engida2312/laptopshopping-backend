@@ -48,14 +48,12 @@ exports.addProduct = async function (req, res) {
         //   message: "Error when trying upload image: ${error}",
         // });
     }
-
-   
 }
 
 // single product
 exports.viewSingleProduct = function (req, res) {
     if (req.session.user) {
-        
+
         res.render('singleProduct', {
             username: req.session.user.username,
             role: req.session.user.role
