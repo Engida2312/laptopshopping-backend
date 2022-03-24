@@ -1,5 +1,6 @@
 const Product = require('../Model/Product');
 const uploads = require('../Middleware/upload');
+const { send } = require('express/lib/response');
 
 //addProductpage
 exports.viewAddProduct = function (req, res) {
@@ -64,5 +65,21 @@ exports.viewSingleProduct = function (req, res) {
             role: ""
         })
     }
+
+}
+
+// display all products for admin 
+exports.displayAllProduct = function(req, res){
+    let product = new Product(req.body);
+    product.readAllProduct().then((allProduct)=>{
+        res.render('all_product',{
+            username: req.session.user.username,
+            role: req.session.user.role,
+            products: allProduct
+        })
+        console.log(allProduct)
+    }).catch((err)=>{
+        send("there is an error" + err)
+    });
 
 }

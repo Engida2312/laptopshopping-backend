@@ -30,9 +30,9 @@ router
     .route('/addProduct')
     .get(productController.viewAddProduct)
     .post(productController.addProduct);
+router
+    .route('/allProduct')
+    .get(productController.displayAllProduct)
 
-// router
-//     .route('readAllProduct')
-    
 
 module.exports = router;

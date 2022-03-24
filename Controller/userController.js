@@ -76,5 +76,16 @@ exports.signout = function(req, res){
 
 //allUsers
 exports.allUsers = function (req, res) {
-    res.render('Allusers')
+    let user = new User(req.body);
+    user.readAllUser().then((allUsers)=>{
+        res.render('Allusers',{
+            username: req.session.user.username,
+            role: req.session.user.role,
+            users: allUsers
+        })
+        console.log(allProduct)
+    }).catch((err)=>{
+        console.log("err" + err)
+        // res.send("there is an error" + err)
+    });
 }

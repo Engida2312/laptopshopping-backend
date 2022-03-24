@@ -43,5 +43,19 @@ User.prototype.login = function(){
         });
     });
 }
+// read all users
+User.prototype.readAllUser =  function(){
+    return new Promise(async(resolve, reject)=>{
+        await usersCollection.find().toArray((err, result)=>{
+           if(err){
+               reject(err)
+           }else{
+               resolve(result);
+           }
+        });
+        // console.log(result) 
+    })
+}
+
 
 module.exports = User   

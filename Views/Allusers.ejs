@@ -28,16 +28,18 @@
                 
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><img src="./yohannes.JPG" alt="no image"></td>
-                        <td>alemu</td>
-                        <td id="email">alemu@gmail.com</td>
-                        <td>User</td>
-                        <td  class="address_col">Rajkot,Gujarat,30006 </td>
-                        <td ><i class="fa fa-caret-right"></i></td>
-                    
+                    <%
+                    users.forEach((user)=>{%>
+                        <tr>
+                            <td><img src="./yohannes.JPG" alt="no image"></td>
+                            <td><%=user.username%></td>
+                            <td id="email"><%=user.email%></td>
+                            <td><%=user.role%></td>
+]                            <td ><i class="fa fa-caret-right"></i></td>
                         
-                    </tr>
+                        </tr>
+                    <%})
+                    %>
                 </tbody>
                 
                 

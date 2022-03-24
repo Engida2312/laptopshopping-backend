@@ -43,7 +43,7 @@ Product.prototype.readAllProduct =  function(){
     return new Promise(async(resolve, reject)=>{
         await productCollection.find().toArray((err, result)=>{
            if(err){
-               reject()
+               reject(err)
            }else{
                resolve(result);
            }
@@ -51,5 +51,6 @@ Product.prototype.readAllProduct =  function(){
         // console.log(result) 
     })
 }
+
 
 module.exports = Product  
