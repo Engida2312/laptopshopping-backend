@@ -12,19 +12,19 @@ exports.home = async function(req, res){
         }else if(req.session.user.role == 'user'){
             let product = new Product(req.body); 
             let result = await product.readAllProduct();
-            console.log(result)
+            // console.log(result)
             res.render('home',{
                 title:"homepage", 
                 username: req.session.user.username,
                 role: req.session.user.role,
                 products : result
-            })
+            })      
         }
     }else{
         // console.log("no session")
         let product = new Product(req.body); 
         let result = await product.readAllProduct();
-        console.log(result)
+        //  console.log(result)
         res.render('home',{
             username: "",
             role: "",
@@ -49,12 +49,12 @@ exports.signup = function(req, res){
         });
     });
 }
-
+ 
 // singin
 exports.signin = function(req, res){
     let user = new User(req.body);
     user.login().then((userData)=>{
-        req.session.user = {username: userData.username, role: userData.role}
+        req.session.user = {username: userData.username, role: userData.role, id: userData._id}
         console.log(req.session.user)
         req.session.save(function(){
             res.redirect('/');

@@ -1,15 +1,18 @@
 <%- include('includes/user-header') %>
     <div class="singel_page_product">
         <div class="singel_page_productimage">
-           
+           <%%>
             <div class="singel_page_sideimages">
-                <img id="sigelpage_defult"  src="/images/front-view.jpg" alt="zoomed image">
-                <img id="sigelpage_sideimg1"  src="/images/back_view.jpg" alt="side image 1">
-                <img id="sigelpage_sideimg2"  src="/images/side_view.jpg" alt="side image 2">
-                <img id="sigelpage_sideimg3"  src="/images/top_view.jpg" alt="side image 3">
+                <% let allimgs = oneproduct.image
+                  console.log(allimgs[0])
+                %>
+                <img id="sigelpage_defult"  src="/uploads/images/<%=allimgs[0]%>" alt="zoomed image">
+                <img id="sigelpage_sideimg1"  src="/uploads/images/<%=allimgs[1]%>" alt="side image 1">
+                <img id="sigelpage_sideimg2"  src="/uploads/images/<%=allimgs[2]%>" alt="side image 2">
+                <img id="sigelpage_sideimg3"  src="/uploads/images/<%=allimgs[3]%>" alt="side image 3">
             </div>
             <div class="singel_page_zommedimage">
-                <h1>your laptop</h1>
+                <h1><%=oneproduct.name%></h1>
                 <div id="singel_page_zoomedimage" class="singel_page_centerimage">
                     <div id="lens"></div>
                     <img id="zoomdimg" src=" " alt="zoomed image">
@@ -17,16 +20,16 @@
             </div>
         </div>
         <div class="singel_page_pruductditail">
-          <h1>your laptop</h1>
+          <h1><%=oneproduct.name%></h1>
           <hr>
-			<h3>$89.99</h3>
+			<h3>$<%=oneproduct.price%></h3>
 
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-           <h3>color <span>: white</span></h3> 
-           <h3>brand  <span>: linovo</span></h3> 
+			<p><%=oneproduct.description%></p>
+           <h3>Category <span>: <%=oneproduct.category%></span></h3> 
+           <h3>brand  <span>: <%=oneproduct.brand%></span></h3> 
             <div class="singe_page_buttons">
                 <button>add to cart</button>
-                <button>Buy now</button>
+            <a href="/orderSummery/<%=oneproduct._id%>"><button> Buy now</button></a>
             </div>
         </div>
     </div>
