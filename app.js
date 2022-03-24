@@ -3,7 +3,7 @@ const express = require('express');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const app = express();
-const router = require('./router');
+const router = require('./router');    
 const bodyParser = require('body-parser')
 
 let sessionOptions = session({

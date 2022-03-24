@@ -1,38 +1,40 @@
 <%- include('includes/user-header') %>
     <main>
         <div class="h_main_body_container">
-            <div class="header_slider_container">
-                <div class="h_slider_img_container">
-                    <img src="./images/h1.png" alt="">
+                <div class="header_slider_container">
+                    <div class="h_slider_img_container">
+                        <img src="./images/h1.png" alt="">
+                    </div>
+                    <div class="h_slider_img_container">
+                        <img src="./images/h2.png" alt="">
+                    </div>
+                    
                 </div>
-                <div class="h_slider_img_container">
-                    <img src="./images/h2.png" alt="">
-                </div>
-                
-            </div>
-            <h2>Highlights</h2>
-            <div class="slider h_slider_container">
-                <% products.forEach((product, index)=>{ %>
-                    <div class="h_product_card">
-                        <div class="heart_icon">
-                            <i class="far fa-heart"></i>
-                        </div>
-                        <div class="product_img_container">
-                            <img src="/uploads/images/<%=product.image[0]%>" alt="image">
-                        </div>
-                        <div class="card_detail">
-                            <h3><%=product.name%></h3>
-                            <div class="product_price">
-                                <h3>₹<%=product.price%></h3>
+                <h2>Highlights</h2>
+                <div class="slider h_slider_container">  
+                    <% products.forEach((product, index)=>{ %>
+                  <a href="/singleProduct/<%=product._id%>">
+                        <div class="h_product_card">
+                            <div class="heart_icon">
+                                <i class="far fa-heart"></i>
                             </div>
-                            <div class="product_rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i> 
+                            <div class="product_img_container">
+                                <img src="/uploads/images/<%=product.image[0]%>" alt="image">
                             </div>
-                        </div>
+                            <div class="card_detail">
+                                <h3><%=product.name%></h3>
+                                <div class="product_price">
+                                    <h3>₹<%=product.price%></h3>
+                                </div>
+                                <div class="product_rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i> 
+                                </div>
+                            </div>
+               </a>
                     </div>    
 
                 <%})%>

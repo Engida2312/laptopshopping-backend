@@ -1,9 +1,9 @@
 const { response } = require('../app');
 
 const productCollection = require('../db').db().collection("products")
-
+const ObjectID = require('mongodb').ObjectID;
 let Product = function (data, file) {
-    this.data = data;
+    this.data = data; 
     this.file = file;
     this.errors = [];
 }
@@ -23,33 +23,47 @@ Product.prototype.addProduct = function () {
             category: this.data.category,
             brand: this.data.brand,
             description: this.data.description,
-            storage: this.data.storage,
-            ram: this.data.ram,
             image: filenames,
             createdDate: new Date()
         }
-        if(this.errors.length != 0){
+        if (this.errors.length != 0) {
             reject()
-        }else{
+        } else {
             await productCollection.insertOne(this.data);
-            resolve(); 
+            resolve();
         }
     })
 }
 
 
 // read all product
-Product.prototype.readAllProduct =  function(){
-    return new Promise(async(resolve, reject)=>{
-        await productCollection.find().toArray((err, result)=>{
-           if(err){
-               reject()
-           }else{
-               resolve(result);
-           }
+Product.prototype.readAllProduct = function () {
+    return new Promise(async (resolve, reject) => {
+        await productCollection.find().toArray((err, result) => {
+            if (err) {
+                reject()
+            } else {
+                resolve(result);
+            }
         });
-        // console.log(result) 
     })
 }
 
+//read one product
+Product.prototype.readoneProduct = function (idd) {
+    return new Promise(async (resolve, reject) => {
+        let id = new ObjectID(idd);
+        console.log(id)
+        await productCollection.findOne({ _id: id }, (err, result) => {
+
+            if (err) {
+                reject()
+            } else {
+                resolve(result)
+            }
+        })
+
+
+    })
+}
 module.exports = Product  
