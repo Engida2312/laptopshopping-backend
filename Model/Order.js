@@ -2,7 +2,7 @@ const { response } = require('../app');
 
 const orderCollection = require('../db').db().collection("orders")
 
-let Order = function (data) {
+let Order = function (data) { 
     this.data = data;
     this.errors = [];
 }

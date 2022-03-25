@@ -1,14 +1,49 @@
 <%- include('includes/user-header') %>
-
-   <div class="myorders_container">
+   <main>
     <h1 class="myorders_h">myOrders</h1>
-    <% Orders.forEach((order, index)=>{ %>
-        <div class="myorders_product">
-        <h5>name:<%=order.name%></h5>
-        </div>
-   
-    <%})%>
-   </div>
-   
+       <div class="cart_container">
+           <div class="cart_items_container">
+           
+            <% Orders.forEach((order, index)=>{ %>
+               
+                    <div class="cart_item">
+                        
+                        <div class="c_product_img_container">
+                            <a href="">
+                                <img src="/uploads/images/<%=order.image[1]%>" alt="image">
+                            </a>
+                        </div>
+                        <div class="c_product_detail_container">
+                            <a href=""><i class="fa-solid fa-trash-can"></i></a>
+                            <a href=""><h3><%=order.name%></h3></a>
+                            
+                            <p> Delivery By tomorrow | <span>Free</span> <strong id="qty">QTY: <span>1</span></strong></p>
+                            <h2>₹<%=order.price%></h2>
+                        </div>
+                       
+                    </div>
+                    
+                    <%})%>
+             </div>
+           </div>
+           <div class="cart_price_detail_container">
+            
+               <h2>Payment Details</h2>
+               <div>
+                   <p>price</p>
+                    <h4>₹</h4>
+               </div>
+               <div>
+                   <p>Delivery cost</p>
+                   <h4>Free</h4>
+               </div>
+               <div> 
+                   <p>Total</p>
+                   <h4>₹51,490.00</h4>
+               </div>
+              
+           </div>
+       </div>
+   </main>
 </body>
 </html>

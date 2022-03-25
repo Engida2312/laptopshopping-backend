@@ -15,7 +15,7 @@ exports.ViewOrderSummery = async function (req, res) {
 
         })
     } else {
-        res.render('signin')
+        res.redirect('/signin');
     }
 
 }
@@ -33,7 +33,7 @@ exports.orderProduct = async function (req, res) {
         })
 
     } else {
-        res.render('signin')
+        res.redirect('/signin');
     }
 
 }
@@ -58,27 +58,35 @@ exports.viewOrder = async function (req, res) {
         let order = new Order(req.body);
         result = await order.getOrder(userid);
         console.log(result);
-         let productsid = [];
+        let productsid = [];
         let orderedProducts = [];
+        let price = [];
         for (let index = 0; index < result.length; index++) {
             const element = result[index];
             productsid.push(element.productid)
             // orderedProducts.push(await product.readoneProduct( element.productid));
         }
-       let orderid = productsid.filter((item, 
+        let orderid = productsid.filter((item,
             index) => productsid.indexOf(item) === index);
         for (let index = 0; index < orderid.length; index++) {
             const element = orderid[index];
             orderedProducts.push(await product.readoneProduct(element));
         }
-        // console.log(orderedProducts)
+        for (let index = 0; index < orderedProducts.length; index++) {
+            const element = orderedProducts[index];
+            price.push(element.price)
+        }
+        console.log(price)
+
         res.render('myOrder', {
-            username: req.session.user.username, 
+            username: req.session.user.username,
             role: req.session.user.role,
-            Orders: orderedProducts
+            Orders: orderedProducts,
+            Orderdetals: result,
+            prices: price
 
         })
     } else {
-        res.render('signin')
+        res.redirect('/signin');
     }
 }
