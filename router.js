@@ -37,5 +37,7 @@ router
      .get(orderController.ViewOrderSummery)
      .post(orderController.orderProduct)
     
-
+router
+    .route('/myOrder')
+    .get(orderController.viewOrder)
 module.exports = router; 

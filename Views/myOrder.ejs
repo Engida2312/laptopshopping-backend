@@ -1,0 +1,14 @@
+<%- include('includes/user-header') %>
+
+   <div class="myorders_container">
+    <h1 class="myorders_h">myOrders</h1>
+    <% Orders.forEach((order, index)=>{ %>
+        <div class="myorders_product">
+        <h5>name:<%=order.name%></h5>
+        </div>
+   
+    <%})%>
+   </div>
+   
+</body>
+</html>

@@ -7,10 +7,10 @@ let Order = function (data) {
     this.errors = [];
 }
 
-Order.prototype.orderProduct = function (productid,userid) {
+Order.prototype.orderProduct = function (userid) {
     this.data = {
         userid: userid,
-        productid: productid, 
+        productid: this.data.prodctid,
         addressname: this.data.name,
         mobile: this.data.mobile,
         pincode: this.data.pincode,
@@ -34,10 +34,10 @@ Order.prototype.orderProduct = function (productid,userid) {
     })
 }
 
-//read all orders of a user
+//read all orders of a singel user
 Order.prototype.getOrder = function (userid) {
     return new Promise(async (resolve, reject) => {
-        await orderCollection.find({userid:userid}).toArray((err, result) => {
+        await orderCollection.find({ userid: userid }).toArray((err, result) => {
             if (err) {
                 reject()
             } else {
@@ -46,4 +46,18 @@ Order.prototype.getOrder = function (userid) {
         });
     })
 }
+
+//read all orders
+Order.prototype.readAllOrder = function () {
+    return new Promise(async (resolve, reject) => {
+        await orderCollection.find().toArray((err, result) => {
+            if (err) {
+                reject()
+            } else {
+                resolve(result);
+            }
+        });
+    })
+}
+
 module.exports = Order
