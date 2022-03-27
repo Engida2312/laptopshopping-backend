@@ -70,9 +70,8 @@ exports.signin = function(req, res){
 exports.signout = function(req, res){
     req.session.destroy(function(){
         res.redirect('/')
-    })
-}
-
+    }) 
+} 
 
 //allUsers
 exports.allUsers = function (req, res) {

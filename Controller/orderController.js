@@ -18,7 +18,7 @@ exports.ViewOrderSummery = async function (req, res) {
         res.redirect('/signin');
     }
 
-}
+} 
 
 //Order Product
 exports.orderProduct = async function (req, res) {

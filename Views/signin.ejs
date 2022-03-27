@@ -23,8 +23,8 @@
             <div class="accountcol-2"> 
              <div class="accountform-container"> 
                  <div class="accountform-btn"> 
-                     <span onclick="login()">Login</span> 
-                     <span onclick="register()">Register</span> 
+                     <span  onclick="register()">Login</span> 
+                     <span onclick="login()">Register</span> 
                      <hr id="indicator"> 
                  </div> 
                  <!-- <button data-close-button class="close-button">&times;</button>  --> 
@@ -33,8 +33,8 @@
                     <input type="text" name="username" placeholder="Username"> 
                     <input type="password" name="password" placeholder="Password"> 
                     <button type="submit" class="accountbtn">Login</button> 
-                    <a href="">Forgot password</a> 
-                    <button data-close-button class="close-button_tocancel_login">Cancel</button> 
+                    <!-- <a href="" style="color: aliceblue;">Forgot password</a>  -->
+                    <!-- <button data-close-button class="close-button_tocancel_login">Cancel</button>  -->
                   </form> 
                   <!-- signup -->
                   <form action="/signup" method="post" id="RegForm"> 
@@ -58,16 +58,17 @@
         var LoginForm = document.getElementById("LoginForm") 
         var RegForm = document.getElementById("RegForm") 
         var indicator = document.getElementById("indicator") 
+        function login(){ 
+              RegForm.style.transform =  "translateX(300px)" 
+              LoginForm.style.transform =  "translateX(300px)" 
+              indicator.style.transform = "translateX(135px)" 
+          } 
           function register(){ 
               RegForm.style.transform =  "translateX(0px)" 
               LoginForm.style.transform =  "translateX(0px)" 
-              indicator.style.transform = "translateX(100px)" 
+              indicator.style.transform = "translateX(0)" 
           } 
-          function login(){ 
-              RegForm.style.transform =  "translateX(300px)" 
-              LoginForm.style.transform =  "translateX(300px)" 
-              indicator.style.transform = "translateX( 0px)" 
-          } 
+         
               
            
     </script> 

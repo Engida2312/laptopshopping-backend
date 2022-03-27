@@ -6,7 +6,7 @@
                 <h3>1 Signin or login</h3>
                 <hr>
                 <div class="ordersummary_email">
-                        <h3>mr. <%=username%> here is your order</h3>
+                        <h3><%=username%> here is your order</h3>
                         <span>By continuing, you agree to Our Terms of Use.</span>
                         <input type="text" name="prodctid" id="productid" hidden value="<%=oneproduct._id%>">
                         <!-- <button id="step1_cont" onclick=" displaystep2()">Continue</button> -->
@@ -55,7 +55,7 @@
                 <hr>
                 <div class="h_product_card">
                   <div class="product_img_container">
-                      <img src="/uploads/images/<%=oneproduct.image[0]%>" alt="image">
+                      <img width="250" height="250" src="/uploads/images/<%=oneproduct.image[0]%>" alt="image">
                   </div>
                   <div class="card_detail">
                       <h3><%=oneproduct.name%></h3>

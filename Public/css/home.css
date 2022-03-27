@@ -175,7 +175,7 @@ input:focus {
 .h_slider_container img {
   object-fit: cover;
   width: 200px;
-  height: 170px;
+  /* height: 170px; */
   margin: 1rem;
 }
 .h_product_card .product_img_container {

@@ -111,12 +111,12 @@ form .btn:focus{
     outline: none; 
 } 
  
-#LoginForm{ 
+#RegForm{ 
     margin-right: 30px; 
     padding: 0px; 
     left: -230px; 
 } 
-#RegForm{ 
+#LoginForm{ 
     margin-left: 20px; 
     padding: 0px; 
     left: 30px; 
@@ -130,7 +130,7 @@ form a{
     background:white; 
     height: 3px; 
     margin-top: 8px; 
-    transform: translateX(100px); 
+    /* transform: translateX(100px);  */
     transition: transform 1s; 
 } 
 #overlay{ 
@@ -141,7 +141,7 @@ form a{
     left: 0; 
     right: 0; 
     bottom: 0; 
-    background-color: black; 
+    /* background-color: black;  */
     pointer-events: all; 
  
 } 
